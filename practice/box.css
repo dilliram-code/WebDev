@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    background-color: rgb(169, 201, 228);
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid rgb(71, 119, 196);
+    box-shadow: 4px 4px 5px rgba(97, 139, 127, 0.789);
+}

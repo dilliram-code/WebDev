@@ -42,22 +42,22 @@
 
 
 
-let color1 = "green";
-let color2 = "red";
-let color3 = "yellow";
+// let color1 = "green";
+// let color2 = "red";
+// let color3 = "yellow";
 
-let value = color1;
+// let value = color1;
 
-if (value==color1)
-{
-    console.log("You can continue your journey");
-} 
-else if (value==color2) 
-{
-    console.log("Danger ahead!! Slow down your speed");
-}else 
-{
-    console.log("Get ready to go!");
-}
+// if (value==color1)
+// {
+//     console.log("You can continue your journey");
+// } 
+// else if (value==color2) 
+// {
+//     console.log("Danger ahead!! Slow down your speed");
+// }else 
+// {
+//     console.log("Get ready to go!");
+// }
 
 

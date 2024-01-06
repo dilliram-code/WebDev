@@ -88,17 +88,17 @@
 
 
 //My Own code copied from above:
-console.log("Start");
+// console.log("Start");
 
-setTimeout(() => {
-    console.log("Pasta is ready!");
-}, 2000);
+// setTimeout(() => {
+//     console.log("Pasta is ready!");
+// }, 2000);
 
-console.log("Continue doing other things...");
+// console.log("Continue doing other things...");
 
-//Asynchronous operation: Simulating chopping vegetables (takes 1 second)
-setTimeout(() => {
-    console.log("Vegetables are chopped!");
-}, 1000)
+// //Asynchronous operation: Simulating chopping vegetables (takes 1 second)
+// setTimeout(() => {
+//     console.log("Vegetables are chopped!");
+// }, 1000)
   
-console.log("End!");
+// console.log("End!");

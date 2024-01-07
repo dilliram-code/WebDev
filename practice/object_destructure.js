@@ -7,7 +7,7 @@ let myObject = {
     subjects: ['Maths', "Science", 'English'],
     courseInstructor: "Chudamani Rajaure"
 }
-
+ 
 //de-structuring an object
 //here, the key=> courseInstructor is set as instructor using object de-structure.
 let {courseInstructor: instructor} = myObject;

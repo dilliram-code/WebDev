@@ -53,3 +53,12 @@ function increase(number) {
 
 increase(number);
 console.log(number);
+
+//Reference type
+let obj = { value: 20 };
+function increase(obj) {
+  obj.value++;
+}
+increase(obj);
+console.log(obj);
+//The value property of the object will be increased by 1. 

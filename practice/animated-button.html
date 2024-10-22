@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated button</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .animated-button {
+      padding: 1em 2em;
+      /* height: 75px;
+      width: 200px; */
+      background-color: rgb(9, 18, 44);
+      color: #fff;
+      border: none;
+      border-radius: 1000px;
+      font-size: 1rem;
+      position: relative;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .animated-button::after {
+      content: '';
+      height: 110%;
+      width: 103%;
+      background-color: red;
+      position: absolute;
+      border: none;
+      border-radius: 50px;
+      z-index: -1;
+      background-image: linear-gradient(to bottom right, #8A2BE2, #FFD700);
+    }
+
+    .animated-button:hover {
+      z-index: 0;
+      box-shadow: 10px 0 20px #892be2d5,
+        -10px 0 20px #ffd900d2;
+    }
+
+    ;
+    }
+  </style>
+</head>
+
+<body>
+  <button type="button" class="animated-button">Animated Button</button>
+</body>
+
+</html>

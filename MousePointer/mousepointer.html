@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Pointer Follow Circle</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgba(18, 9, 81, 0.722);
+      pointer-events: none;
+      transition: transform 0.1s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- The circle will be created by JavaScript -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const circle = document.createElement('div');
+      circle.classList.add('circle');
+      document.body.appendChild(circle);
+
+      let mouseX = 0;
+      let mouseY = 0;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.pageX - 25; // Adjust so the circle centers on the cursor
+        mouseY = e.pageY - 25;
+
+        circle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+      });
+
+      // When mouse stops, slightly enlarge the circle
+      let timeout;
+      document.addEventListener('mousemove', () => {
+        clearTimeout(timeout);
+        circle.style.width = '50px';
+        circle.style.height = '50px';
+
+        timeout = setTimeout(() => {
+          circle.style.width = '70px';
+          circle.style.height = '70px';
+        }, 100);
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated box</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+
+    .box {
+      height: 100vh;
+      width: 100vw;
+      /* background-color: rgb(12, 18, 31); */
+      background-color: rgb(6, 10, 18);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      padding: 5px;
+      width: 250px;
+      font-size: 20px;
+      height: 250px;
+      background-color: rgb(12, 18, 31);
+      color: #bcd5d6;
+      text-align: center;
+      border-radius: 25px;
+      position: relative;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: red;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: -1;
+      padding: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="card">
+</body>
+<h1>Animated Card</h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque fugit minima et. Consequatur
+mollitia neque cumque doloribus doloremque,delectus delectus autem?oloribus doloremque, delectus autem?
+</div>
+</div>
+</body>
+
+</html>

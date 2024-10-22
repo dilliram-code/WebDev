@@ -34,3 +34,22 @@ function Circle(radius) {
 }
 
 const another = new Circle(1);
+
+//Primitive and reference Types
+
+//Primitive type ==> copy by the value
+let x = 10;
+let y = x;
+
+// console.log("The value of y: ", y)
+// console.log("The value of x: ", x)
+
+
+//Reference types
+let number = 10;
+function increase(number) {
+  number++;
+}
+
+increase(number);
+console.log(number);

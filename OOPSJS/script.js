@@ -140,4 +140,6 @@ let campus1 = new Campus("Amrit", "Lainchaur", 200, "Arbind", 17);
 let campus2 = new Campus("Saraswati", "Thamel", 500, "Hem Raj", 20);
 
 // console.log(campus1.principal)
-console.log(campus2.changeWard(20));
+// console.log(campus2.changeWard(20));
+console.log(campus1);
+

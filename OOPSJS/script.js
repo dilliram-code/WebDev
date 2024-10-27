@@ -67,7 +67,7 @@ increase(obj);
 
 
 
-//------------------------------------ OBJECT -----------------------------
+//------------------------------------ OBJECT --------------------------
 //Object can be defined in three ways:
 // 1.By object literal
 // 2.By using new word
@@ -75,7 +75,7 @@ increase(obj);
 
 
 
-//--------------------------------- using Object literal----------------------
+//--------------------------------- using Object literal-------------------
 
 let myObject = {
   firstName: "Dilli",
@@ -102,7 +102,7 @@ myObject.lastName = "Kuwar";
 // console.log(myObject['middle name']);
 
 
-//--------------------------- using new word --------------------------
+//--------------------------- using new word -------------------------------
 let secondObject = new Object();
 //This creates the new object with no property
 secondObject.fruit = "Banana";
@@ -121,7 +121,7 @@ secondObject.signUp = false;
 
 
 
-//------------------------------using constructor function ----------------
+//------------------------using constructor function ------------------------
 function Campus(name, address, area, principal, ward) {
   this.name = name;
   this.address = address;
@@ -141,5 +141,25 @@ let campus2 = new Campus("Saraswati", "Thamel", 500, "Hem Raj", 20);
 
 // console.log(campus1.principal)
 // console.log(campus2.changeWard(20));
-console.log(campus1);
+// console.log(campus1);
+
+
+
+//----------------------------------Arrow Function ----------------------------
+//Normal function
+function findSum(first_number, second_number) {
+  return first_number + second_number;
+}
+
+let result = findSum(10, 12);
+// console.log(result);
+
+//An  arrow function(Below example is for one line function)
+let calculateSum = (first_num, second_num) => first_num + second_num;
+// console.log(calculateSum(30, 40));
+
+//An arrow function(If the parameter is single then we can remove the parenthesis)
+let findIncrement = number => number + 10;
+console.log(findIncrement(20));
+
 

@@ -166,4 +166,13 @@ let findIncrement = number => number + 10;
 let randomFunction = () => Math.random()
 // console.log(randomFunction());
 
+//Anonymous function
+document.addEventListener('click', function () {
+  // console.log('clicked');
+
+});
+
+//Using arrow function just like an anonymous function
+document.addEventListener('click', () => console.log("clicked"));
+//This shows that the function of anonymous function can be done using arrow function
 

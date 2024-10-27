@@ -160,6 +160,10 @@ let calculateSum = (first_num, second_num) => first_num + second_num;
 
 //An arrow function(If the parameter is single then we can remove the parenthesis)
 let findIncrement = number => number + 10;
-console.log(findIncrement(20));
+// console.log(findIncrement(20));
+
+//What if there is no parameter (In place of parameter we have to put only parenthesis)
+let randomFunction = () => Math.random()
+// console.log(randomFunction());
 
 

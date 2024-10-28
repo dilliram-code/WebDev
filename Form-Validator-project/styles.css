@@ -60,6 +60,7 @@ h2{
   width: 100%;
   padding:10px;
   font-size: 14px;
+  margin-bottom: 8px;
 }
 
 .form-control input:focus{

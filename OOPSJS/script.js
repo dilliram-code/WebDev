@@ -167,12 +167,26 @@ let randomFunction = () => Math.random()
 // console.log(randomFunction());
 
 //Anonymous function
-document.addEventListener('click', function () {
-  // console.log('clicked');
+// document.addEventListener('click', function () {
+//   // console.log('clicked');
 
-});
+// });
 
 //Using arrow function just like an anonymous function
-document.addEventListener('click', () => console.log("clicked"));
+// document.addEventListener('click', () => console.log("clicked"));
 //This shows that the function of anonymous function can be done using arrow function
 
+//----------------------------------Callbacks --------------------------------
+function morningwhistler() {
+  console.log("Hey, wake up wake up!");
+}
+
+function myFunction(morning, evening, callback) {
+  console.log(morning + " and " + evening + " are favourite meal!");
+  callback();
+}
+
+let morningMeal = "Nepali Khana";
+let eveningMeal = "Newari set";
+
+myFunction(morningMeal, eveningMeal, morningwhistler);

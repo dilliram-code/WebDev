@@ -189,4 +189,17 @@ function myFunction(morning, evening, callback) {
 let morningMeal = "Nepali Khana";
 let eveningMeal = "Newari set";
 
-myFunction(morningMeal, eveningMeal, morningwhistler);
+// myFunction(morningMeal, eveningMeal, morningwhistler);
+
+//Note: we can also create an anonymous function directly while passing in the manin function as shown below
+function mainFunction(first, second, anonymousFunction) {
+  anonymousFunction();
+  return `The sum of the numbers  is ${first + second}`;
+
+}
+
+let output = mainFunction(30, 40, function () {
+  console.log("I am anonymous function.");
+})
+
+console.log(output);

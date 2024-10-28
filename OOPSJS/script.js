@@ -198,8 +198,32 @@ function mainFunction(first, second, anonymousFunction) {
 
 }
 
-let output = mainFunction(30, 40, function () {
-  console.log("I am anonymous function.");
+// let output = mainFunction(30, 40, function () {
+//   console.log("I am anonymous function.");
+// })
+
+// console.log(output);
+
+//--------------------------------MAP function --------------------------------
+
+//Let's see a general problem: Suppose we have an array numberArray= [1,2,3,4,5]
+// let numberArray = [1, 2, 3, 4, 5];
+// let doubledArray = [];
+// //The elements of the array can be doubled using a for loop
+// for (let i = 0; i < numberArray.length; i++) {
+//   doubledArray[i] = numberArray[i] * 2;
+// }
+// console.log(doubledArray);
+
+//The problem above can be solved by using the map function more easily as shown below:
+let newArray = [1, 2, 3, 4, 5];
+let mapArray = newArray.map(function (item) {
+  return item * 2;
 })
 
-console.log(output);
+// console.log(mapArray);
+
+//The above task can also be achieved by using an arrow function. 
+let testArray = [1, 2, 3, 4, 5];
+let mapArrow = testArray.map((val) => val * 3);
+console.log(mapArrow);

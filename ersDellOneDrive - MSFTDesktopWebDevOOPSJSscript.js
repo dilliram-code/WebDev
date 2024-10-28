@@ -1,0 +1,191 @@
+[33mcommit da2c1d2e07ba19d481eb24e4a762828794d44c7a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Mon Oct 28 08:58:22 2024 +0545
+
+    pass anonymous function directly
+
+[33mcommit 610b6ee2dc5edfe059fb4c6719a101b6e4b55f78[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Mon Oct 28 08:51:24 2024 +0545
+
+    create call back function
+
+[33mcommit 7bf27d84902a72dd280f6dbb5e176ae80afadabf[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Sun Oct 27 22:48:25 2024 +0545
+
+    Create arrow function of even listener
+
+[33mcommit 20705684b8a2fde2feb79ae2651c13cc906c0c86[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Sun Oct 27 22:35:00 2024 +0545
+
+    Create different types of random function
+
+[33mcommit 645f10c66aa9a0f0c951512004c9903b2d26b5db[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Sun Oct 27 22:29:37 2024 +0545
+
+    Create arrow function
+
+[33mcommit 935e4cf32f3d5340856aae364538299603564002[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Sat Oct 26 22:38:21 2024 +0545
+
+    create object
+
+[33mcommit 9a08dcab8f20f424675b63819477b7edaf8b3fdc[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Sat Oct 26 22:20:46 2024 +0545
+
+    Object revision, especially it's constructiong ideas
+
+[33mcommit a384ab8dd59a654e516ee200ee80c75cb02eeabc[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Tue Oct 22 09:02:03 2024 +0545
+
+    In object, value is copied by reference
+
+[33mcommit 723af2cf0cee7248183cc39b9149264622beffb7[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Tue Oct 22 08:51:28 2024 +0545
+
+    Reference types
+
+[33mcommit f4e71f40cc2a727a25ad2d18c3ad2cdd9e9ba4d8[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Tue Oct 22 08:42:40 2024 +0545
+
+    Constructor function example
+
+[33mcommit 2f539761d21450b1c9c600b63d8172e0a6c6aecc[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Tue Oct 22 08:15:16 2024 +0545
+
+    constructor funfunction another
+
+[33mcommit 96c2d2669da49a3b11b93a01e615fe122ea77434[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Tue Oct 22 08:03:24 2024 +0545
+
+    object and ways to create it
+
+[33mcommit 755d5f229d4554dcd021aca07bb2a383fdafd3e9[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Wed Jan 10 16:27:10 2024 +0000
+
+    just commited
+
+[33mcommit 96e8fe38226d5273623df0e81f2ce5aa52ebbb1e[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Wed Jan 10 16:26:44 2024 +0000
+
+    aysnchronous js practiced
+
+[33mcommit e8752f5fda225b2b13d474f0baf61d620ae7f400[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Tue Jan 9 17:35:44 2024 +0000
+
+    promise practised
+
+[33mcommit 7a27db6f82836f7bc4b6a7fc7a476bd9cd451c85[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Mon Jan 8 03:02:15 2024 +0000
+
+    immediatley invoked function practised
+
+[33mcommit a833fb5ce79e5563118099265fd46ab940de8a5f[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Sun Jan 7 15:34:37 2024 +0000
+
+    object destructure
+
+[33mcommit 50c64af84bfb30c7a46f44c38cebc6efb9870c51[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Sun Jan 7 09:42:37 2024 +0000
+
+    object-destructure practised
+
+[33mcommit 209bfcd16ccccc81458a2be6aa4ccbc71f66cc5b[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Sun Jan 7 09:21:53 2024 +0000
+
+    Object second part completed
+
+[33mcommit dad94dc99a0c191d08e1e4139b008141fd4d7a57[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Sat Jan 6 16:27:53 2024 +0000
+
+    random number generator function
+
+[33mcommit 4aa654fcf1b23f26d349c27dad5cf5a6eeac9741[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Sat Jan 6 16:09:12 2024 +0000
+
+    deleted
+
+[33mcommit cb2c00df8cf6d1e1f7af4624e8b82887cb342be1[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Sat Jan 6 16:07:35 2024 +0000
+
+    array some other features practised
+
+[33mcommit 962094dc339fcbc4c2a1adf234494f81fc4575a2[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Sat Jan 6 13:21:03 2024 +0000
+
+    Array basics practice
+
+[33mcommit 8540b2e24ef4b0d1d011b87ae687fdf3889b82f5[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Sat Jan 6 09:26:58 2024 +0000
+
+    Asynchronous JavaScript
+
+[33mcommit 25ddb8675cacf0d108d4f4ceb3881d5305b70cd0[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Fri Jan 5 06:46:05 2024 +0000
+
+    this practice done
+
+[33mcommit 683b8114f3546c595ae57ac00efda2496f3351ea[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Fri Jan 5 06:36:43 2024 +0000
+
+    this keyword in practice
+
+[33mcommit eb8190228666471dc2a7373f4552d8399bfa0538[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Fri Jan 5 06:20:55 2024 +0000
+
+    today's practice
+
+[33mcommit b8336c895b78244ab679f9b80eed34b1714f322e[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Fri Jan 5 06:20:23 2024 +0000
+
+    map, filter and reduce function
+
+[33mcommit 86046ce7faedae7176ec6cfcc49bacafba4c7d43[m
+Author: Dilli Ram Chaudhary <62086366+Dilli-ram-gif@users.noreply.github.com>
+Date:   Fri Jul 14 21:20:15 2023 +0545
+
+    Create README.md
+
+[33mcommit bebb8800137a4df1ca70f2017c51ac8026ab6a51[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Fri Jul 14 20:46:44 2023 +0545
+
+    data types
+
+[33mcommit 5f453176750a0162e04b77f2beb49702ecd2038e[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Fri Jul 14 20:16:41 2023 +0545
+
+    added
+
+[33mcommit 09947d0a1f3ed949016dff3a5e8fbd6afd178f06[m
+Author: Dilli Ram Chaudhary <chaudharydr23@gmail.com>
+Date:   Tue Jul 11 18:11:50 2023 +0545
+
+    web dev practice

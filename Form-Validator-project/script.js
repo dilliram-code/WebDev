@@ -107,3 +107,6 @@ form.addEventListener('submit', function (e) {
   checkEmail(input);
   checkPasswordMatch(password, password2);
 })
+
+
+//This is upto here only for now, in future definitely I will manage it.

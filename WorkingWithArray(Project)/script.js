@@ -76,7 +76,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /////////////////////////////////////////////////
 //Array methods
 
-let arr = ['a', 'b', 'c', 'd', 'e'];
+// let arr = ['a', 'b', 'c', 'd', 'e'];
 
 //slice method
 // console.log(arr.slice(0, 5));
@@ -86,4 +86,21 @@ let arr = ['a', 'b', 'c', 'd', 'e'];
 //to shallow copy the original array using slice method
 // console.log(arr.slice());
 
-let newArray = arr.slice([...arr]) //This will return the original array without mutating.
+// let newArray = arr.slice([...arr]) //This will return the original array without mutating.
+
+
+//at method
+let primeNumbers = [2, 3, 5, 7, 11];
+
+//getting the last element
+// console.log(primeNumbers.at(-1));
+// console.log(primeNumbers[primeNumbers.length - 1]);
+// console.log(primeNumbers.slice(-1));  //This will return an array
+// console.log(primeNumbers)
+
+//To get the element from the array above, we need to put the index of the sliced array
+// console.log(primeNumbers.slice(-1)[0])
+
+
+
+

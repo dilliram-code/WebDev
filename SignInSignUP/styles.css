@@ -49,6 +49,10 @@ body{
 .form-box.register{
   visibility: hidden;
 }
+.container.active .form-box.register {
+  visibility: visible;
+}
+
 form {
   width: 100%;
 }

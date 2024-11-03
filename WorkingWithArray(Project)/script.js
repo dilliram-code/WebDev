@@ -74,3 +74,16 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+//Array methods
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+//slice method
+// console.log(arr.slice(0, 5));
+// console.log(arr.slice(-1));
+// console.log(arr.slice(-1, -3));
+
+//to shallow copy the original array using slice method
+// console.log(arr.slice());
+
+let newArray = arr.slice([...arr]) //This will return the original array without mutating.

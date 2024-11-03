@@ -20,10 +20,10 @@ body{
 }
 
 .panel{
-  display: flex;
+  /* display: flex;
   justify-color: center;
   align-items: center;  
-  justify-content: center;
+  justify-content: center; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -40,8 +40,8 @@ body{
 .panel h3{
   font-size: 24px;
   position: absolute;
-  /* bottom: 20px; */
-  /* left: 20px; */
+  bottom: 20px;
+  left: 20px;
   margin: 0;
   opacity: 0;
 }
@@ -52,6 +52,7 @@ body{
 
 .panel.active h3{
   opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media screen and (max-width:480px){

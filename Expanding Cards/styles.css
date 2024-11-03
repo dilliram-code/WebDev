@@ -20,10 +20,9 @@ body{
 }
 
 .panel{
-  /* display: flex;
-  justify-color: center;
+  display: flex;
+  justify-content: center;
   align-items: center;  
-  justify-content: center; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -40,10 +39,21 @@ body{
 .panel h3{
   font-size: 24px;
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  /* bottom: 20px; */
+  /* left: 20px; */
   margin: 0;
   opacity: 0;
+}
+
+.text-background {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-radius: 5px; 
+    width: 60%; 
+    height: 30px;
 }
 
 .panel.active{

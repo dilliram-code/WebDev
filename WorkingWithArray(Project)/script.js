@@ -71,7 +71,7 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 //Array methods
@@ -90,7 +90,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 
 //at method
-let primeNumbers = [2, 3, 5, 7, 11];
+// let primeNumbers = [2, 3, 5, 7, 11];
 
 //getting the last element
 // console.log(primeNumbers.at(-1));
@@ -102,5 +102,25 @@ let primeNumbers = [2, 3, 5, 7, 11];
 // console.log(primeNumbers.slice(-1)[0])
 
 
+//for operator
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+for (const movement of movements) {
+  if (movement > 0) {
+    console.log(`You have deposited ${movement}.`);
+  } else {
+    console.log(`You have withdrew ${Math.abs(movement)}`)
+  }
+}
 
+console.log("----------------------------------------------");
+
+//higher order function forEach
+
+movements.forEach(movement => {
+  if (movement > 0) {
+    console.log(`You have deposited ${movement}.`);
+  } else {
+    console.log(`You have withdrew ${Math.abs(movement)}`)
+  }
+})

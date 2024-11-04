@@ -41,7 +41,38 @@ body {
   font-family: var(--body-font);
   background-color: var(--body-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
+
+.header-content {
+  display: flex;
+  width: 100vw;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 2px 0;
+}
+
+.header-content h1{
+  background: linear-gradient(to right,  #ff7e5f, #8e44ad); 
+  -webkit-background-clip: text;
+  color: transparent; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  font-size: 2.5rem;
+  transition: all .5s ease-in-out;
+}
+
+.header-content h1:hover {
+  background: linear-gradient(to right, #1e90ff, #32cd32); 
+  -webkit-background-clip: text;
+  color: transparent; 
+  font-size: 3rem;
+  font-weight: 700;
+}
+
 
 img{
   display: block;
@@ -57,7 +88,7 @@ img{
   display: grid;
   place-items: center;
   margin-inline: 1.5rem;
-  padding-block: 5rem;
+  padding-block: 4rem 1rem;
 }
 .card__container {
   display: grid;
@@ -106,6 +137,13 @@ img{
   font-weight: 500;
   color: var(--title-color);
   margin-bottom: .75rem;
+  transition: all .5s ease-in-out;
+}
+
+.card__title:hover{
+  background: linear-gradient(to right,#1e90ff, #32cd32); 
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .card__button {
@@ -177,6 +215,7 @@ img{
 }
 
 /*=============== BREAKPOINTS ===============*/
+
 /* For small devices */
 @media screen and (max-width: 340px) {
   .container {

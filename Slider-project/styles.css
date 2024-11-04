@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,4 +8,14 @@
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  font-family: "Nanum Gothic", serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframes</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: sans-serif;
+      font-size: 62.5%;
+    }
+
+    body {
+      /* position: relative; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* align-content: center; */
+      /* text-align: center; */
+      height: 100vh;
+    }
+
+    @keyframes rainbow-box {
+      0% {
+        background-color: red;
+      }
+
+      10% {
+        background-color: yellow;
+      }
+
+      20% {
+        background-color: orange;
+      }
+
+      30% {
+        background-color: green;
+      }
+
+      40% {
+        background-color: violet;
+      }
+
+      50% {
+        background-color: indigo;
+      }
+      60% {
+        background-color: rgb(143, 183, 197);
+      }
+      70% {
+        background-color: rgb(205, 169, 39);
+      }
+      80% {
+        background-color: rgb(39, 8, 62);
+      }
+      90% {
+        background-color: rgb(185, 17, 231);
+      }
+      100% {
+        background-color: rgb(12, 112, 26);
+      }
+    }
+
+
+    .container {
+      font-size: 4rem;
+      /* margin: 0 auto; */
+      /* position: absolute; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 500px;
+      height: 100px;
+      padding: 2px;
+      border: 7px solid rgb(143, 183, 197);
+      border-radius: 20px;
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+      /* top: 250px; */
+      color: rgb(228, 240, 239);
+      animation: rainbow-box 3s linear infinite;
+    }
+  </style>
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <div class="container">Rainbow</div>
+</body>
+
+</html>

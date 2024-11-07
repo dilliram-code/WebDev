@@ -65,27 +65,28 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
+/* const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
-]);
+]); 
+*/
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 //Array methods
 
-// let arr = ['a', 'b', 'c', 'd', 'e'];
+/* let arr = ['a', 'b', 'c', 'd', 'e'];
 
-//slice method
-// console.log(arr.slice(0, 5));
-// console.log(arr.slice(-1));
-// console.log(arr.slice(-1, -3));
+slice method
+console.log(arr.slice(0, 5));
+console.log(arr.slice(-1));
+console.log(arr.slice(-1, -3));
+
+*/
 
 //to shallow copy the original array using slice method
 // console.log(arr.slice());
-
 // let newArray = arr.slice([...arr]) //This will return the original array without mutating.
 
 
@@ -103,7 +104,7 @@ const currencies = new Map([
 
 
 //for operator
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+/* const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 for (const movement of movements) {
   if (movement > 0) {
@@ -113,14 +114,18 @@ for (const movement of movements) {
   }
 }
 
-console.log("----------------------------------------------");
+*/
+// console.log("----------------------------------------------");
 
 //higher order function forEach
 
-movements.forEach(movement => {
+/* movements.forEach(movement => {
   if (movement > 0) {
     console.log(`You have deposited ${movement}.`);
   } else {
     console.log(`You have withdrew ${Math.abs(movement)}`)
   }
-})
+}) */
+
+
+

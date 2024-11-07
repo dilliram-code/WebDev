@@ -81,9 +81,38 @@ img {
 }
 
 .main {
-  overflow: hidden;
+  overflow: hidden; /*====== FOR ANIMATION =======*/
 }
 .logo {
   width: 3.8rem;
   height: auto;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  width: 36px;
+}
+
+.nav__toggle,
+.nav__close {
+  display: inline-flex;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
 }

@@ -12,21 +12,22 @@ Now, let's translate this analogy into a simpler JavaScript example:
 
 
 
-// var kitchen = {
-//     ingredients: ['flour', 'sugar', 'egges'],
-//     prepare: function () {
-//         console.log('Preparing a dish with ' + this.ingredients.join(", "));
-//     }
-// };
+var kitchen = {
+    ingredients: ['flour', 'sugar', 'egges'],
+    prepare: function () {
+        console.log('Preparing a dish with ' + this.ingredients.join(", "));
+    }
+};
 
-// //The chef (function)
-// function chef(){
-//     console.log("I am the Chef!");
-//     this.prepare();
-// };
+//The chef (function)
+function chef(){
+    console.log("I am the Chef!");
+    this.prepare();
+};
 
-// //The Chef function() is assigned to work in the kitchen
+//The Chef function() is assigned to work in the kitchen
 // chef.call(kitchen);
+
 
 
 
@@ -47,7 +48,7 @@ Now, let's translate this analogy into a simpler JavaScript example:
 //     }
 // };
 
-// //Function creation
+// //Create a function assigned to the task in the myObject.
 // function performance(){
 //     console.log('I am '+ this.name);
 //     this.action();

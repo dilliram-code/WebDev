@@ -41,6 +41,7 @@ document.addEventListener('keydown', function (e) {
 ///////////////////////////////////////
 /*=============== SELECTING ELEMENTS============= */
 
+/* 
 console.log(document.documentElement)
 console.log(document.head);
 console.log(document.body);
@@ -53,7 +54,6 @@ document.getElementById('section--1')
 
 const allButtons = document.getElementsByTagName('button');
 console.log(allButtons);
-
 
 /*========== CREATING AND INSERTING ELEMENTS ===========*/
 //insertAdjacentHTML
@@ -79,7 +79,8 @@ console.log(allButtons);
 
 
 // Create the message element and set its content
-const message = document.createElement('div');
+
+/* const message = document.createElement('div');
 message.classList.add('cookie-message');
 message.innerHTML = 'We use cookies for improved functionality and analytics. <button class="btn btn--close--cookie">Got it!</button>';
 
@@ -144,3 +145,5 @@ logo.classList.contains('c'); //not include
 //Don't use
 // logo.className = 'jonas';
 //This ends the topic and afterwards we are going to start our project
+*/
+

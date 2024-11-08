@@ -115,6 +115,8 @@ console.log(logo.alt);
 console.log(logo.src);
 console.log(logo.className);
 
+//We not only read but also create the attribute
+logo.alt = 'Beautiful minimilist logo';
 
 //Non-standard
 console.log(logo.designer);

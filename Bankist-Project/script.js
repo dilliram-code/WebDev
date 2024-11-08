@@ -58,12 +58,35 @@ console.log(allButtons);
 /*========== CREATING AND INSERTING ELEMENTS ===========*/
 //insertAdjacentHTML
 
+// const message = document.createElement('div');
+// message.classList.add('cookie-message');
+// // message.textContent = 'We use cookies for improved functionality and analytics.';
+
+// message.innerHTML = 'We use cookies for improved functionality and analytics. <button class="btn btn--close--cookie">Got it!</button>';
+
+// // header.prepend(message);
+// header.append(message);
+// // header.append(message.cloneNode(true));
+
+// //beore and after
+// // header.before(message);
+// // header.after(message);
+
+// //Delete elements
+// document.querySelector('.btn--close-cookie').addEventListener('click', function(){
+//   message.remove();
+// })
+
+
+// Create the message element and set its content
 const message = document.createElement('div');
 message.classList.add('cookie-message');
-message.textContent = 'We use cookies for improved functionality and analytics.';
-
 message.innerHTML = 'We use cookies for improved functionality and analytics. <button class="btn btn--close--cookie">Got it!</button>';
 
-// header.prepend(message);
+// Append the message to the header
 header.append(message);
-// header.append(message.cloneNode(true));
+
+// Now, add the event listener after the message is appended to the DOM
+document.querySelector('.btn--close--cookie').addEventListener('click', function() {
+  message.remove();
+});

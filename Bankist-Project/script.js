@@ -95,3 +95,18 @@ document.querySelector('.btn--close--cookie').addEventListener('click', function
 //Styles for the message
 message.style.backgroundColor = '#00416A';
 message.style.width = '120%';
+
+console.log(message.style.color);
+console.log(message.style.backgroundColor);
+
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+
+message.style.height = Number.parseFloat(getComputedStyle(message).height, 10)+ 30 +'px'; 
+
+//Change CSS variable
+document.documentElement.style.setProperty(
+  '--color-primary', 'orangered'
+);
+
+//

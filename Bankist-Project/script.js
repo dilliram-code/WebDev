@@ -88,5 +88,6 @@ header.append(message);
 
 // Now, add the event listener after the message is appended to the DOM
 document.querySelector('.btn--close--cookie').addEventListener('click', function() {
-  message.remove();
+  message.remove();  //This method has arrived recently 
+  //Alternative: message.parentElement.removeChild(message);
 });

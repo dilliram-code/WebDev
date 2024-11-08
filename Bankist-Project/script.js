@@ -91,3 +91,7 @@ document.querySelector('.btn--close--cookie').addEventListener('click', function
   message.remove();  //This method has arrived recently 
   //Alternative: message.parentElement.removeChild(message);
 });
+
+//Styles for the message
+message.style.backgroundColor = '#00416A';
+message.style.width = '120%';

@@ -127,6 +127,7 @@ img {
     width: 100%;
     box-shadow: 0 1px 16px hsla(210, 55%, 24%, 0.1);
     display: flex;
+    padding-block: 3.5rem 2rem;
     flex-direction: column;
     row-gap: 2.5rem;
     transition: top 0.4s;
@@ -172,4 +173,9 @@ img {
   position: absolute;
   top: 1rem;
   right: 1.5rem;
+}
+
+/* Show menu */
+.show-menu {
+  top: 0;
 }

@@ -143,3 +143,4 @@ logo.classList.contains('c'); //not include
 
 //Don't use
 // logo.className = 'jonas';
+//This ends the topic and afterwards we are going to start our project

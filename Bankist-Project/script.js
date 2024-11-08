@@ -134,3 +134,12 @@ console.log(link.getAttribute('href'));
 
 //Data attributes
 console.log(logo.dataset.versionNumber);
+
+//Classes
+logo.classList.add('c', 'k');
+logo.classList.remove('c', 'p');
+logo.classList.toggle('c');
+logo.classList.contains('c'); //not include
+
+//Don't use
+// logo.className = 'jonas';

@@ -199,3 +199,11 @@ h1.addEventListener('mouseenter', handleEvent);
 
 setTimeout(()=> h1.removeEventListener('mouseenter', handleEvent), 3000);
 //
+
+//Random number generator
+const randomInt = (min, max) => 
+  Math.floor(Math.random()*(max-min + 1) + min);
+
+const randomColor = rgb(`${randomInt(0,256)}, ${randomInt(0,256)}, ${randomInt(0,256)}`);
+
+//

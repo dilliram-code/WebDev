@@ -257,3 +257,11 @@ logo.classList.contains('c'); //not include
 //   this.style.backgroundColor = randomColor();
 //   console.log('NAV', e.target, e.currentTarget);
 // })
+
+const h1 = document.querySelector('h1');
+
+//Going downwards: child
+console.log(h1.querySelectorAll('.highlight'));
+console.log(h1.childNodes);
+console.log(h1.parentElement);
+console.log(h1.firstChild)

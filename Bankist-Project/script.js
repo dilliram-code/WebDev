@@ -206,4 +206,9 @@ const randomInt = (min, max) =>
 
 const randomColor = rgb(`${randomInt(0,256)}, ${randomInt(0,256)}, ${randomInt(0,256)}`);
 
-//
+//Selecting element using their classes
+
+const navLink = document.querySelector('.nav_link');
+const navLinks = document.querySelector('.nav__links');
+const nav = document.querySelector('.nav');
+

@@ -169,10 +169,13 @@ btnScrollTo.addEventListener('click', function(e){
   //   s1coords.left + window.scrollX, s1coords.top + window.scrollY
   // );
 
-  window.scrollTo({
-    left: s1coords.left + window.scrollX,
-    top: s1coords.top + window.scrollY,
-    behavior: 'smooth',
-  })
+  // window.scrollTo({
+  //   left: s1coords.left + window.scrollX,
+  //   top: s1coords.top + window.scrollY,
+  //   behavior: 'smooth',
+  // });
+
+  //More polished approach
+  section1.scrollIntoView({behavior: 'smooth'});  
 
 });

@@ -204,11 +204,23 @@ setTimeout(()=> h1.removeEventListener('mouseenter', handleEvent), 3000);
 const randomInt = (min, max) => 
   Math.floor(Math.random()*(max-min + 1) + min);
 
-const randomColor = rgb(`${randomInt(0,256)}, ${randomInt(0,256)}, ${randomInt(0,256)}`);
+const randomColor = ()=> `rgb(${randomInt(0,256)}, ${randomInt(0,256)}, ${randomInt(0,256)})`;
 
 //Selecting element using their classes
 
-const navLink = document.querySelector('.nav_link');
+const navLink = document.querySelector('.nav__link');
 const navLinks = document.querySelector('.nav__links');
 const nav = document.querySelector('.nav');
 
+//addEventlistener
+navLink.addEventListener('click', function(e){
+  this.style.backgroundColor = randomColor();
+})
+
+navLinks.addEventListener('click', function(e){
+  this.style.backgroundColor = randomColor();
+})
+
+nav.addEventListener('click', function(e){
+  this.style.backgroundColor = randomColor();
+})

@@ -2,11 +2,12 @@
 
 ///////////////////////////////////////
 // Modal window
-
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
 
 const openModal = function (e) {
   e.preventDefault();
@@ -35,8 +36,47 @@ document.addEventListener('keydown', function (e) {
 });
 
 
+//Button scrolling
+btnScrollTo.addEventListener('click', function(e){
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+  console.log(e.target.getBoundingClientRect());
 
+
+  //The property pageXOffset and pageOffsetY have been deprecated. 
+  // console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+
+  console.log('Current scroll (X/Y)', window.scrollX, window.scrollY);
+
+  //We can also see the height and width of the portion of the page we see
+  console.log('Height and Width of viewport:', document.documentElement.clientHeight, document.documentElement.clientWidth);
+
+  //Scrolling
+  // window.scrollTo(
+  //   s1coords.left + window.scrollX, s1coords.top + window.scrollY
+  // );
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.scrollX,
+  //   top: s1coords.top + window.scrollY,
+  //   behavior: 'smooth',
+  // });
+
+  //More polished approach
+  section1.scrollIntoView({behavior: 'smooth'});  
+
+});
 ///////////////////////////////////////
+//Page Navigation
+document.querySelectorAll('.nav__link').forEach(function(el){
+  el.addEventListener('click', function(e){
+    console.log("LINK");
+  })
+})
+
+
+
+
 ///////////////////////////////////////
 ///////////////////////////////////////
 /*=============== SELECTING ELEMENTS============= */
@@ -147,87 +187,55 @@ logo.classList.contains('c'); //not include
 //This ends the topic and afterwards we are going to start our project
 */
 
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
 
-btnScrollTo.addEventListener('click', function(e){
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
-  console.log(e.target.getBoundingClientRect());
+// const h1 = document.querySelector('h1');
 
-
-  //The property pageXOffset and pageOffsetY have been deprecated. 
-  // console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
-
-  console.log('Current scroll (X/Y)', window.scrollX, window.scrollY);
-
-  //We can also see the height and width of the portion of the page we see
-  console.log('Height and Width of viewport:', document.documentElement.clientHeight, document.documentElement.clientWidth);
-
-  //Scrolling
-  // window.scrollTo(
-  //   s1coords.left + window.scrollX, s1coords.top + window.scrollY
-  // );
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.scrollX,
-  //   top: s1coords.top + window.scrollY,
-  //   behavior: 'smooth',
-  // });
-
-  //More polished approach
-  section1.scrollIntoView({behavior: 'smooth'});  
-
-});
-
-const h1 = document.querySelector('h1');
-
-function handleEvent (e){
-  alert("EventListener: Good Job!");
-};
-
-h1.addEventListener('mouseenter', handleEvent);
-
-// h1.addEventListener('mouseenter', function(e){
-//   alert("EventListener: Good job!");
-// });
-
-
-// h1.onmouseenter = function(e){
-//   alert("onmouseenter: Good job!");
+// function handleEvent (e){
+//   alert("EventListener: Good Job!");
 // };
 
-setTimeout(()=> h1.removeEventListener('mouseenter', handleEvent), 3000);
-//
+// h1.addEventListener('mouseenter', handleEvent);
 
-//Random number generator
-const randomInt = (min, max) => 
-  Math.floor(Math.random()*(max-min + 1) + min);
+// // h1.addEventListener('mouseenter', function(e){
+// //   alert("EventListener: Good job!");
+// // });
 
-const randomColor = ()=> `rgb(${randomInt(0,256)}, ${randomInt(0,256)}, ${randomInt(0,256)})`;
 
-//Selecting element using their classes
+// // h1.onmouseenter = function(e){
+// //   alert("onmouseenter: Good job!");
+// // };
 
-const navLink = document.querySelector('.nav__link');
-const navLinks = document.querySelector('.nav__links');
-const nav = document.querySelector('.nav');
+// setTimeout(()=> h1.removeEventListener('mouseenter', handleEvent), 3000);
+// //
 
-//addEventlistener
-navLink.addEventListener('click', function(e){
-  this.style.backgroundColor = randomColor();
-  console.log('LINK', e.target, e.currentTarget);
-  console.log(e.currentTarget === this);
-  // Stop propagation
-  // e.stopPropagation();
-})
+// //Random number generator
+// const randomInt = (min, max) => 
+//   Math.floor(Math.random()*(max-min + 1) + min);
 
-navLinks.addEventListener('click', function(e){
-  this.style.backgroundColor = randomColor();
-  console.log('CONTAINER', e.target, e.currentTarget);
+// const randomColor = ()=> `rgb(${randomInt(0,256)}, ${randomInt(0,256)}, ${randomInt(0,256)})`;
 
-})
+// //Selecting element using their classes
 
-nav.addEventListener('click', function(e){
-  this.style.backgroundColor = randomColor();
-  console.log('NAV', e.target, e.currentTarget);
-})
+// const navLink = document.querySelector('.nav__link');
+// const navLinks = document.querySelector('.nav__links');
+// const nav = document.querySelector('.nav');
+
+// //addEventlistener
+// navLink.addEventListener('click', function(e){
+//   this.style.backgroundColor = randomColor();
+//   console.log('LINK', e.target, e.currentTarget);
+//   console.log(e.currentTarget === this);
+//   // Stop propagation
+//   // e.stopPropagation();
+// })
+
+// navLinks.addEventListener('click', function(e){
+//   this.style.backgroundColor = randomColor();
+//   console.log('CONTAINER', e.target, e.currentTarget);
+
+// })
+
+// nav.addEventListener('click', function(e){
+//   this.style.backgroundColor = randomColor();
+//   console.log('NAV', e.target, e.currentTarget);
+// })

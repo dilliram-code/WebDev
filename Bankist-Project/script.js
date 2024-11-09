@@ -163,4 +163,7 @@ btnScrollTo.addEventListener('click', function(e){
 
   //We can also see the height and width of the portion of the page we see
   console.log('Height and Width of viewport:', document.documentElement.clientHeight, document.documentElement.clientWidth);
+
+  //Scrolling
+  window.scrollTo(s1coords.left, s1coords.top);
 });

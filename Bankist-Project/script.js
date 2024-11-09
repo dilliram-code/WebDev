@@ -215,12 +215,20 @@ const nav = document.querySelector('.nav');
 //addEventlistener
 navLink.addEventListener('click', function(e){
   this.style.backgroundColor = randomColor();
+  console.log('LINK', e.target, e.currentTarget);
+  console.log(e.currentTarget === this);
+  // Stop propagation
+  // e.stopPropagation();
 })
 
 navLinks.addEventListener('click', function(e){
   this.style.backgroundColor = randomColor();
+  console.log('CONTAINER', e.target, e.currentTarget);
+
 })
 
 nav.addEventListener('click', function(e){
   this.style.backgroundColor = randomColor();
-})
+  console.log('NAV', e.target, e.currentTarget);
+
+}, true)

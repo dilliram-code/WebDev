@@ -160,4 +160,7 @@ btnScrollTo.addEventListener('click', function(e){
   // console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
 
   console.log('Current scroll (X/Y)', window.scrollX, window.scrollY);
+
+  //We can also see the height and width of the portion of the page we see
+  console.log('Height and Width of viewport:', document.documentElement.clientHeight, document.documentElement.clientWidth);
 });

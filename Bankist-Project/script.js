@@ -165,5 +165,14 @@ btnScrollTo.addEventListener('click', function(e){
   console.log('Height and Width of viewport:', document.documentElement.clientHeight, document.documentElement.clientWidth);
 
   //Scrolling
-  window.scrollTo(s1coords.left, s1coords.top);
+  // window.scrollTo(
+  //   s1coords.left + window.scrollX, s1coords.top + window.scrollY
+  // );
+
+  window.scrollTo({
+    left: s1coords.left + window.scrollX,
+    top: s1coords.top + window.scrollY,
+    behavior: 'smooth',
+  })
+
 });

@@ -181,10 +181,21 @@ btnScrollTo.addEventListener('click', function(e){
 });
 
 const h1 = document.querySelector('h1');
-h1.addEventListener('mouseenter', function(e){
-  alert("EventListener: Good job!");
-});
 
-h1.onmouseenter = function(e){
-  alert("onmouseenter: Good job!");
+function handleEvent (e){
+  alert("EventListener: Good Job!");
 };
+
+h1.addEventListener('mouseenter', handleEvent);
+
+// h1.addEventListener('mouseenter', function(e){
+//   alert("EventListener: Good job!");
+// });
+
+
+// h1.onmouseenter = function(e){
+//   alert("onmouseenter: Good job!");
+// };
+
+setTimeout(()=> h1.removeEventListener('mouseenter', handleEvent), 3000);
+//

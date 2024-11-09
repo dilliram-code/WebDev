@@ -42,7 +42,8 @@
       width: 50%;
       background-color: teal;
       border-radius: 2rem;
-      font-size: 9rem;
+      font-size: 10rem;
+      font-weight: 700;
       text-align: center;
     }
 
@@ -58,7 +59,10 @@
 
   <script>
     const clockDigit = document.querySelector('.display-container');
-    clockDigit.innerHTML = "Ramesh";
+      setInterval(() => {
+        let date = new Date();
+        clockDigit.innerHTML = date.toLocaleTimeString(); // Use toLocaleTimeString for time
+      }, 1000);
   </script>
 </body>
 </html>

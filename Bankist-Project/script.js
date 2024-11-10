@@ -111,6 +111,9 @@ tabsContainer.addEventListener('click', function(e){
 
   //Guard clause
   if(!clicked) return;
+
+  //Active tab
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
   clicked.classList.add('operations__tab--active');
 })
 

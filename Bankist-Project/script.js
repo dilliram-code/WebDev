@@ -93,7 +93,10 @@ document.querySelector('.nav__links').addEventListener('click', function(e){
   }
 });
 
-
+//Tabbed component
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
 
 ///////////////////////////////////////
 ///////////////////////////////////////
@@ -245,6 +248,7 @@ logo.classList.contains('c'); //not include
 //   console.log(e.currentTarget === this);
 //   // Stop propagation
 //   // e.stopPropagation();
+
 // })
 
 // navLinks.addEventListener('click', function(e){
@@ -258,7 +262,7 @@ logo.classList.contains('c'); //not include
 //   console.log('NAV', e.target, e.currentTarget);
 // })
 
-const h1 = document.querySelector('h1');
+/* const h1 = document.querySelector('h1');
 
 //Going downwards: child
 console.log(h1.querySelectorAll('.highlight'));
@@ -290,4 +294,4 @@ console.log(h1.parentElement.children);
     if (el !==h1) el.style.transform = 'scale(0.5)';
   }
 )
-
+*/

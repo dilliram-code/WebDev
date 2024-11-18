@@ -25,3 +25,7 @@ body {
   transform: translateY(50px); /* Slightly moved down */
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
+.section.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Moves to original position */
+}

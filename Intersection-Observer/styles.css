@@ -20,10 +20,10 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  background: lightgray;
+  background: teal;
   opacity: 0; /* Initially hidden */
-  transform: translateY(50px); /* Slightly moved down */
-  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(100px); /* Slightly moved down */
+  transition: opacity 1s ease, transform 2s ease;
 }
 .section.visible {
   opacity: 1; /* Fully visible */

@@ -242,10 +242,16 @@ const loadImg = function(entries, observer){
 const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
   threshold: 0,
-  rootMargin: '200px',
+  rootMargin: '200px'
 });
 
 imgTargets.forEach(img => imgObserver.observe(img));
+
+//Slider
+const slides = document.querySelectorAll('.slide');
+const slider = document.querySelector('.slider');
+
+slides.forEach((s, i1) => (s.style.transform = `translateX(${100*i}%)`));
 
 ///////////////////////////////////////
 ///////////////////////////////////////

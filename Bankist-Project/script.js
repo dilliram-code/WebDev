@@ -216,7 +216,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 });
 allSections.forEach(function (section){
   sectionObserver.observe(section);
-  section.classList.add('section--hidden');
+  // section.classList.add('section--hidden');
 })
 
 
@@ -249,9 +249,19 @@ imgTargets.forEach(img => imgObserver.observe(img));
 
 //Slider
 const slides = document.querySelectorAll('.slide');
-const slider = document.querySelector('.slider');
+const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
 
-slides.forEach((s, i1) => (s.style.transform = `translateX(${100*i}%)`));
+const slider = document.querySelector('.slider');
+slider.style.transform = 'scale(0.4) translateX(-800px)';
+slider.style.overflow = 'visible';
+
+
+slides.forEach((s, i) => (s.style.transform = `translateX(${100*i}%)`));
+// 0%, 100%, 200%, 300%
+
+//Next slide 
+btnRight.addEventListener('click', function(){});
 
 ///////////////////////////////////////
 ///////////////////////////////////////

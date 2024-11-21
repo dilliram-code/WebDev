@@ -280,11 +280,9 @@ const createDots = function (){
   })
 }
 
-
-
 //Make dot active
 const activeDot = function(slide){
-  document.querySelectorAll('.dots__dot').forEach(dot => dot.classList.remove('dots_dot--active'));
+  document.querySelectorAll('.dots__dot').forEach(dot => dot.classList.remove('dots__dot--active'));
 
   document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add('dots__dot--active');
 }

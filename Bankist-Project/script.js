@@ -248,6 +248,8 @@ const imgObserver = new IntersectionObserver(loadImg, {
 imgTargets.forEach(img => imgObserver.observe(img));
 
 //Slider
+function slider(){
+
 const slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
@@ -344,6 +346,9 @@ dotContainer.addEventListener('click', function(e){
     activeDot(slide);
   }
 });
+};
+
+slider();
 ///////////////////////////////////////
 ///////////////////////////////////////
 /*=============== SELECTING ELEMENTS============= */

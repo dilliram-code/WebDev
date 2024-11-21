@@ -278,7 +278,7 @@ const createDots = function (){
   })
 }
 
-createDots();
+
 
 //Make dot active
 const activeDot = function(slide){
@@ -293,7 +293,7 @@ const goToSlide = function(slide) {
     (s,i) => {s.style.transform = `translateX(${100*(i - slide)}%)`}
   );
 };
-goToSlide(0);
+
 
 //Next slide 
 const nextSlide = function (){
@@ -317,6 +317,16 @@ const prevSlide = function (){
   activeDot(curSlide);
 }
 
+const init = function(){
+  goToSlide(0);
+  createDots();
+
+  activeDot(0);
+};
+init();
+
+
+//Event handlers
 btnRight.addEventListener('click',nextSlide);
 btnLeft.addEventListener('click', prevSlide);
 

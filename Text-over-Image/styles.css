@@ -7,3 +7,33 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 80%;
+  left: 48%;
+  font-weight: 700;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  font-family: 'Clicker Script', cursive;
+  font-size: 4rem;
+  color: #ea0c40;
+  text-shadow: 2px 2px 20px rgba(206, 8, 127, 0.7);
+}

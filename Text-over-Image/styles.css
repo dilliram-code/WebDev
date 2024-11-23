@@ -34,6 +34,19 @@ body {
   transform: translate(-50%, -50%) rotate(-15deg);
   font-family: 'Clicker Script', cursive;
   font-size: 4rem;
-  color: #ea0c40;
-  text-shadow: 2px 2px 20px rgba(206, 8, 127, 0.7);
+  color: #13f2be;
+  text-shadow: 2px 2px 20px rgba(21, 83, 83, 0.7);
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.overlay-text:hover {
+  position: absolute;
+  top: 80%;
+  left: 48%;
+  font-weight: 700;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  font-family: 'Clicker Script', cursive;
+  font-size: 4.5rem;
+  color: #3cf6e0;
+  text-shadow: 2px 2px 20px rgba(218, 235, 235, 0.7);
 }

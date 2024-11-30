@@ -17,7 +17,7 @@ body{
   justify-content: center;
   position: relative;
 }
-.loadiing-page {
+.loading-page {
   position: absolute;
   top: 0;
   left: 0;
@@ -47,6 +47,10 @@ body{
   100% {
     stroke-dashoffset: 0;
   }
+}
+.name-container{
+  height: 30px;
+  overflow: hidden;
 }
 .logo-name {
   color: #fff;

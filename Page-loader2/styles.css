@@ -26,7 +26,7 @@ body{
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
   flex-direction: column;
 }
@@ -36,7 +36,8 @@ body{
   stroke: #fff;
   fill-opacity: 0;
   stroke-width: 3px;
-  animation: draw;
+  stroke-dasharray: 4500 ;
+  animation: draw 8s ease;
 }
 
 @keyframes draw {

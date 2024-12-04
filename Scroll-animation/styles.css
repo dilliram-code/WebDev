@@ -6,12 +6,40 @@ body{
 }
 
 section {
-  display: grid;
-  place-items: center;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
+}
+.logo{
+  margin: 5px;
+}
+.logo img{
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  background-size: cover;
+}
+.logo:nth-child(2){
+  transition-delay: 200ms;
+}
+.logo:nth-child(3){
+  transition-delay: 400ms;
+}
+.logo:nth-child(4){
+  transition-delay: 600ms;
+}
+.logo:nth-child(5){
+  transition-delay: 800ms;
+}
 .hidden {
   opacity: 0;
   filter: blur(5px);

@@ -1,19 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body{
-  background-color: #131316;
-  color: #ffffff;
+  background-color: #222;
+  color: #fff;
+  padding: 0;
+  margin: 0;
 }
-.heading-text{
-  text-align: center;
-}
+
 section {
   display: grid;
   place-items: center;
-  align-items: center;
+  align-content: center;
   min-height: 100vh;
 }
 
@@ -23,7 +18,7 @@ section {
   transform: translateX(-100%);
   transition: all 2s;
 }
-.show {
+.show{
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);

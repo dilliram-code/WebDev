@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border animation</title>
+    <style>
+      .card {
+        height: 50px;
+        width:150px;
+        background-color: green;
+        text-align: center;
+        margin: 50px auto;
+        color: white;
+        font-size: 30px;
+        position: relative;
+        cursor: pointer;
+      }
+      .card::after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="card">
+      click me
+    </div>
+
+  </body>
+</html>

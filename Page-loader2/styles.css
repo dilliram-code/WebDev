@@ -7,7 +7,7 @@
 body{
   height: 100vh;
 }
-.container {
+.main-container {
   background: black;
   color: #fff;
   height: 100%;

@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta />
-    <title>DR Sword Loader</title>
+    <title>Sunburst Sword Loader</title>
     <style>
       * {
         margin: 0;
@@ -28,21 +27,23 @@
         justify-content: center;
         align-items: center;
         z-index: 9999;
-        animation: fadeOut 5s forwards 3s;
+        animation: fadeOut 1s forwards 4s;
       }
 
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        font-family: "Segoe UI", sans-serif;
-        font-size: 2.5rem;
-        color: white;
-        opacity: 1;
-        animation: logoFade 3s forwards;
+      .center-logo {
+        position: relative;
+        z-index: 2;
+        animation: logoFade 4s forwards;
+      }
+
+      .dr-logo {
+        height: 150px;
       }
 
       .sword {
+        position: absolute;
+        top: 50%;
+        left: 50%;
         width: 50px;
         height: 10px;
         background: linear-gradient(
@@ -57,23 +58,10 @@
         animation: fireWave 2s ease-in-out infinite;
         box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00, 0 0 30px #ffd700,
           0 0 40px #ff0000;
-      }
-
-      .left-sword {
         clip-path: polygon(0 50%, 90% 0, 100% 50%, 90% 100%, 0 50%);
-        animation: moveLeft 7s forwards;
+        transform-origin: left center;
       }
 
-      .right-sword-wrapper {
-        animation: moveRight 7s forwards;
-      }
-
-      .right-sword {
-        clip-path: polygon(0 50%, 90% 0, 100% 50%, 90% 100%, 0 50%);
-        transform: scaleX(-1); /* flip visually */
-      }
-
-      /* Animations */
       @keyframes fireWave {
         0% {
           background-position: 0% 50%;
@@ -86,24 +74,13 @@
         }
       }
 
-      @keyframes moveLeft {
+      @keyframes moveOut {
         0% {
-          transform: translateX(0);
+          transform: rotate(var(--angle)) translateX(0) scaleX(var(--flip));
           opacity: 1;
         }
         100% {
-          transform: translateX(-100vw);
-          opacity: 0;
-        }
-      }
-
-      @keyframes moveRight {
-        0% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-        100% {
-          transform: translateX(100vw);
+          transform: rotate(var(--angle)) translateX(100vw) scaleX(var(--flip));
           opacity: 0;
         }
       }
@@ -124,6 +101,10 @@
         }
       }
 
+      .sword-ray {
+        animation: moveOut 4s forwards;
+      }
+
       .content {
         display: none;
         padding: 40px;
@@ -139,13 +120,30 @@
   </head>
   <body>
     <div class="loader" id="loader">
-      <div class="logo">
-        <div class="sword left-sword"></div>
+      <div class="center-logo">
         <img src="images/om_logo.png" alt="DR Logo" class="dr-logo" />
-        <div class="right-sword-wrapper">
-          <div class="sword right-sword"></div>
-        </div>
       </div>
+
+      <!-- Generate 20 swords (like rays) rotating evenly around circle -->
+      <script>
+        const loader = document.getElementById("loader");
+        const numberOfSwords = 20;
+
+        for (let i = 0; i < numberOfSwords; i++) {
+          const angle = (360 / numberOfSwords) * i;
+          const sword = document.createElement("div");
+          sword.className = "sword sword-ray";
+          sword.style.setProperty("--angle", angle + "deg");
+          sword.style.setProperty("--flip", angle > 90 && angle < 270 ? -1 : 1);
+
+          // Sync animation by adding a slight delay based on angle difference from 180
+          const normalized = Math.abs(180 - angle) / 180; // Closer to center = less delay
+          const delay = normalized * 0.3; // Max 0.3s delay
+          sword.style.animationDelay = `${delay}s`;
+
+          loader.appendChild(sword);
+        }
+      </script>
     </div>
 
     <div class="content">🎉 Welcome to the site!</div>
@@ -153,7 +151,7 @@
     <script>
       setTimeout(() => {
         document.body.classList.add("loaded");
-      }, 4000);
+      }, 5000);
     </script>
   </body>
 </html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radial Sword Loader</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: black;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .loader-container {
+        position: fixed;
+        inset: 0;
+        background: black;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        z-index: 10;
+        animation: fadeOut 2.5s ease-in-out forwards;
+        animation-delay: 1.8s;
+      }
+
+      .sword {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 3px;
+        height: 100vh;
+        background: linear-gradient(
+          to top,
+          rgba(255, 100, 0, 0.2),
+          rgba(255, 0, 0, 1),
+          rgba(255, 255, 0, 0.5)
+        );
+        transform-origin: top center;
+        transform: rotate(var(--angle)) scaleY(0);
+        animation: shootOut 1.5s ease-out forwards;
+      }
+
+      @keyframes shootOut {
+        0% {
+          transform: rotate(var(--angle)) scaleY(0);
+          opacity: 1;
+        }
+        80% {
+          transform: rotate(var(--angle)) scaleY(2);
+          opacity: 1;
+        }
+        100% {
+          transform: rotate(var(--angle)) scaleY(2.5);
+          opacity: 0;
+        }
+      }
+
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          transform: scale(1.5);
+        }
+      }
+
+      .logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-container" id="loader">
+      <div class="logo">
+        <!-- Replace with your logo image -->
+        <img src="images/om_logo.png" alt="DR Logo" />
+      </div>
+    </div>
+
+    <script>
+      const loader = document.getElementById("loader");
+      const numberOfSwords = 60;
+
+      for (let i = 0; i < numberOfSwords; i++) {
+        const angle = (360 / numberOfSwords) * i;
+        const sword = document.createElement("div");
+        sword.className = "sword";
+        sword.style.setProperty("--angle", `${angle}deg`);
+        loader.appendChild(sword);
+      }
+
+      // Optional: remove loader after animation
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 3000);
+    </script>
+  </body>
+</html>

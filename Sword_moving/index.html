@@ -37,7 +37,7 @@
         font-size: 2.5rem;
         color: white;
         opacity: 1;
-        animation: logoFade 2s forwards;
+        animation: logoFade 3s forwards;
       }
 
       .sword {
@@ -59,11 +59,11 @@
 
       .left-sword {
         clip-path: polygon(0 50%, 90% 0, 100% 50%, 90% 100%, 0 50%);
-        animation: moveLeft 5s forwards;
+        animation: moveLeft 7s forwards;
       }
 
       .right-sword-wrapper {
-        animation: moveRight 5s forwards;
+        animation: moveRight 7s forwards;
       }
 
       .right-sword {
@@ -139,7 +139,7 @@
     <div class="loader" id="loader">
       <div class="logo">
         <div class="sword left-sword"></div>
-        <div class="dr-text">DR</div>
+        <img src="images/om_logo.png" alt="DR Logo" class="dr-logo" />
         <div class="right-sword-wrapper">
           <div class="sword right-sword"></div>
         </div>
@@ -151,7 +151,7 @@
     <script>
       setTimeout(() => {
         document.body.classList.add("loaded");
-      }, 6000);
+      }, 4000);
     </script>
   </body>
 </html>

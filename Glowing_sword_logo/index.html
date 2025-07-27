@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DR Logo with Outward Fire Swords</title>
+    <style>
+      body {
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 2.5rem;
+        color: white;
+      }
+
+      .sword {
+        width: 50px;
+        height: 10px;
+        position: relative;
+        background: linear-gradient(
+          120deg,
+          #ff0000,
+          #ffa500,
+          #ffff00,
+          #ffa500,
+          #ff0000
+        );
+        background-size: 300% 300%;
+        animation: fireWave 2s ease-in-out infinite;
+        box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00, 0 0 30px #ffd700,
+          0 0 40px #ff0000;
+      }
+
+      /* Now correctly flipped outward */
+      .left-sword {
+        clip-path: polygon(0 50%, 90% 0, 100% 50%, 90% 100%, 0 50%);
+      }
+
+      .right-sword {
+        clip-path: polygon(0 50%, 90% 0, 100% 50%, 90% 100%, 0 50%);
+        transform: scaleX(-1); /* flip to point right */
+      }
+
+      @keyframes fireWave {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <div class="sword left-sword"></div>
+      <div>DR</div>
+      <div class="sword right-sword"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DR Sword Loader</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #000;
+        overflow: hidden;
+      }
+
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        animation: fadeOut 5s forwards 3s;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 2.5rem;
+        color: white;
+        opacity: 1;
+        animation: logoFade 2s forwards;
+      }
+
+      .sword {
+        width: 50px;
+        height: 10px;
+        background: linear-gradient(
+          120deg,
+          #ff0000,
+          #ffa500,
+          #ffff00,
+          #ffa500,
+          #ff0000
+        );
+        background-size: 300% 300%;
+        animation: fireWave 2s ease-in-out infinite;
+        box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00, 0 0 30px #ffd700,
+          0 0 40px #ff0000;
+      }
+
+      .left-sword {
+        clip-path: polygon(0 50%, 90% 0, 100% 50%, 90% 100%, 0 50%);
+        animation: moveLeft 5s forwards;
+      }
+
+      .right-sword-wrapper {
+        animation: moveRight 5s forwards;
+      }
+
+      .right-sword {
+        clip-path: polygon(0 50%, 90% 0, 100% 50%, 90% 100%, 0 50%);
+        transform: scaleX(-1); /* flip visually */
+      }
+
+      /* Animations */
+      @keyframes fireWave {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @keyframes moveLeft {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(-100vw);
+          opacity: 0;
+        }
+      }
+
+      @keyframes moveRight {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(100vw);
+          opacity: 0;
+        }
+      }
+
+      @keyframes logoFade {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      .content {
+        display: none;
+        padding: 40px;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      body.loaded .content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader" id="loader">
+      <div class="logo">
+        <div class="sword left-sword"></div>
+        <div class="dr-text">DR</div>
+        <div class="right-sword-wrapper">
+          <div class="sword right-sword"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">🎉 Welcome to the site!</div>
+
+    <script>
+      setTimeout(() => {
+        document.body.classList.add("loaded");
+      }, 6000);
+    </script>
+  </body>
+</html>

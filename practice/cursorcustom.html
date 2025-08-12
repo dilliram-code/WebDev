@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Put this anywhere in the <body> (script will move it to document.body if needed) -->
+    <div class="cursor-symbol" aria-hidden="true">
+      <div class="cursor-dot"></div>
+      <div class="cursor-circle"></div>
+    </div>
+
+    <style>
+      :root {
+        --primary-color: hsl(var(--hue), var(--sat), var(--light));
+        --z-max: 9999;
+        --hue: 181;
+        --sat: 47%;
+        --light: 49%;
+      }
+
+      /* container */
+      .cursor-symbol {
+        position: fixed;
+        inset: 0; /* top:0; right:0; bottom:0; left:0; */
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none; /* allow clicks through the cursor */
+        z-index: var(--z-max);
+      }
+
+      /* small dot */
+      .cursor-dot {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        transform: translate3d(-50%, -50%, 0) scale(1);
+        will-change: transform, background;
+        transition: transform 240ms cubic-bezier(0.2, 0.9, 0.2, 1),
+          background 240ms ease;
+        pointer-events: none;
+      }
+
+      /* circle around cursor */
+      .cursor-circle {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid var(--primary-color);
+        transform: translate3d(-50%, -50%, 0);
+        opacity: 0.6;
+        will-change: transform, opacity;
+        transition: transform 220ms ease, opacity 180ms ease;
+        pointer-events: none;
+      }
+
+      /* "large" state — we scale the dot for smooth animation */
+      .cursor-dot.large {
+        /* scale instead of changing width/height to stay smooth */
+        transform: translate3d(-50%, -50%, 0) scale(12);
+        background: hsl(var(--hue) var(--sat) var(--light) / 0.35);
+        transition-duration: 300ms;
+      }
+    </style>
+
+    <script>
+      (function () {
+        // Locate cursor element (support both .cursor-symbol and .cursor)
+        const cursor =
+          document.querySelector(".cursor-symbol") ||
+          document.querySelector(".cursor");
+        if (!cursor) return; // nothing to do
+
+        // Ensure cursor is appended to body (prevents issues if parent uses CSS transform)
+        if (cursor.parentElement !== document.body)
+          document.body.appendChild(cursor);
+
+        const cursorDot = cursor.querySelector(".cursor-dot");
+        const cursorCircle = cursor.querySelector(".cursor-circle");
+        if (!cursorDot || !cursorCircle) return;
+
+        // Smooth follow variables
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let targetX = mouseX;
+        let targetY = mouseY;
+
+        // Update target on pointer move (works for mouse + touch pen)
+        document.addEventListener(
+          "pointermove",
+          (e) => {
+            targetX = e.clientX;
+            targetY = e.clientY;
+          },
+          { passive: true }
+        );
+
+        // Render loop (easing for smooth trailing)
+        function animate() {
+          // easing factor (0 < f < 1) — smaller = smoother/laggier
+          const f = 0.35;
+          mouseX += (targetX - mouseX) * f;
+          mouseY += (targetY - mouseY) * f;
+
+          // apply transforms (translate3d for GPU acceleration)
+          const isLarge = cursorDot.classList.contains("large");
+          cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%) ${
+            isLarge ? "scale(12)" : "scale(1)"
+          }`;
+          cursorCircle.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+
+          requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+
+        // Hover target selector (same as your original list)
+        const hoverSelector =
+          "body a, .theme-btn, .sue-main-btn, .portfolio-card, .swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet, .service-card, .contact-social-links li, .contact-form .submit-btn, .menu-show-btn, .menu-hide-btn";
+
+        // Use event delegation so dynamic elements or newly-rendered sections are handled
+        document.addEventListener("pointerover", (e) => {
+          if (e.target.closest(hoverSelector)) {
+            cursorDot.classList.add("large");
+            cursorCircle.style.display = "none";
+          }
+        });
+
+        document.addEventListener("pointerout", (e) => {
+          // only remove if the pointer didn't immediately land on another hover target
+          // (relatedTarget may be null in some cases)
+          const toEl = e.relatedTarget;
+          if (!toEl || !toEl.closest || !toEl.closest(hoverSelector)) {
+            cursorDot.classList.remove("large");
+            cursorCircle.style.display = "block";
+          }
+        });
+
+        // small polish: hide if pointer leaves the window
+        document.addEventListener("mouseleave", () => {
+          cursorDot.style.opacity = "0";
+          cursorCircle.style.opacity = "0";
+        });
+        document.addEventListener("mouseenter", () => {
+          cursorDot.style.opacity = "1";
+          cursorCircle.style.opacity = "0.6";
+        });
+      })();
+    </script>
+  </body>
+</html>

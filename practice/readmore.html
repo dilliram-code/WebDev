@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* CSS */
+.post-preview {
+max-width: 900px;
+margin: 2rem auto;
+position: relative;
+font-family: system-ui, sans-serif;
+line-height: 1.65;
+}
+
+/* Hide the checkbox */
+.read-toggle { position: absolute; left: -9999px; }
+
+/* Lead text always visible */
+.post-preview .lead {
+margin: 0 0 1rem 0;
+color: #111;
+}
+
+/* The hidden part: start collapsed and blurred */
+.post-preview .more {
+  max-height: 0;                 /* collapsed */
+  overflow: hidden;
+  filter: blur(5px) brightness(.95);
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height .55s cubic-bezier(.2,.8,.2,1),
+              filter .35s ease,
+              opacity .35s ease,
+              transform .35s ease;
+}
+
+/* subtle gradient hint overlay when collapsed */
+.post-preview::after {
+  content: "";
+  display: block;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 56px; /* place above the button area */
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 75%);
+  transition: opacity .3s ease;
+}
+
+/* When checked -> expand and clear blur */
+.read-toggle:checked ~ .text-block .more {
+  max-height: 2000px; /* large enough for content */
+  filter: none;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* hide gradient hint when expanded */
+.read-toggle:checked ~ .text-block::after {
+  opacity: 0;
+}
+
+/* Read more button */
+.read-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: pointer;
+  user-select: none;
+  background: linear-gradient(90deg,#7c3aed,#06b6d4);
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: .95rem;
+  border: none;
+  text-align: center;
+}
+
+/* toggle "Read more" / "Read less" text */
+.read-btn .hide { display: none; }
+.read-toggle:checked + .text-block + .read-btn .hide { display: inline; }
+.read-toggle:checked + .text-block + .read-btn .show { display: none; }
+
+/* mobile adjustments */
+@media (max-width:600px) {
+  .post-preview { padding: 0 1rem; }
+  .post-preview::after { bottom: 72px; height: 100px; }
+}
+
+    </style>
+  <body>
+    <!-- HTML -->
+    <section class="post-preview">
+      <input type="checkbox" id="read-toggle" class="read-toggle" />
+      <div class="text-block">
+        <p class="lead">
+          Religion has been a part of human civilization for as long as history
+          can remember. From ancient tribal rituals under the stars to grand
+          temples, mosques, churches, and monasteries, religion has shaped how
+          people see the world and how they treat one another. But in today’s
+          fast-changing, interconnected world, a question often comes to mind:
+          Do we still need religion? Or has its time passed?
+        </p>
+
+        <div class="more">
+          <!-- The rest of your long paragraph goes here -->
+          <p>
+            The roots of religion stretch back thousands of years. In ancient
+            times, when people could not explain natural events like storms,
+            eclipses, or illness, they often attributed them to powerful unseen
+            forces...
+            <!-- paste the remaining text here -->
+          </p>
+          <p>
+            <!-- more paragraphs as needed -->
+            At the end of the day, whether you are religious or not, what
+            matters is how your beliefs — or lack of them — influence your
+            actions. Do they make you more compassionate? More just? More human?
+            That is the real question worth answering.
+          </p>
+        </div>
+      </div>
+
+      <label for="read-toggle" class="read-btn" aria-hidden="true">
+        <span class="show">Read more</span>
+        <span class="hide">Read less</span>
+      </label>
+    </section>
+  </body>
+</html>
